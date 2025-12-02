@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Công Cụ TikTok Tools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff0050; /* Màu TikTok Đỏ */
+            --secondary: #00f2ea; /* Màu TikTok Xanh */
+            --bg-color: #f0f4f8;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --border-color: #000;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(#dbeafe 2px, transparent 2px);
+            background-size: 30px 30px;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Header hoạt hình */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            margin-top: 30px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--text-color);
+            text-shadow: 3px 3px 0px var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            background: #fff;
+            display: inline-block;
+            padding: 5px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            box-shadow: 4px 4px 0px var(--border-color);
+        }
+
+        /* Container chứa các thẻ */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        /* Thiết kế thẻ Card */
+        .card {
+            background: var(--card-bg);
+            border: 3px solid var(--border-color);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 8px 8px 0px var(--border-color);
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0px var(--border-color);
+        }
+
+        .card:active {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px var(--border-color);
+        }
+
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        p.desc {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        /* Nút bấm */
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background-color: var(--secondary);
+            color: var(--border-color);
+            font-weight: 600;
+            padding: 12px 24px;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            transition: all 0.2s;
+            box-shadow: 3px 3px 0px var(--border-color);
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 5px 5px 0px var(--border-color);
+            transform: translateY(-2px);
+        }
+
+        /* Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>TikTok Tools 🚀</h1>
+        <p class="subtitle">Tổng hợp công cụ phân tích dữ liệu Tiktok</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="card">
+            <span class="icon">📊</span>
+            <h2>Multi-Channel Analyzer</h2>
+            <p class="desc">Thống kê chỉ số lượt xem, lượt tương tác trung bình của nhiều kênh TikTok cùng lúc.</p>
+            <a href="https://thanhnhut201294.github.io/channel/" target="_blank" class="btn">Truy cập ngay</a>
+        </div>
+
+        <div class="card">
+            <span class="icon">📈</span>
+            <h2>Analytics Pro</h2>
+            <p class="desc">Phân tích sâu chỉ số lượt xem và tương tác của một hoặc nhiều đường link video cụ thể.</p>
+            <a href="https://thanhnhut201294.github.io/tiktok-report/" target="_blank" class="btn">Truy cập ngay</a>
+        </div>
+
+        <div class="card">
+            <span class="icon">📂</span>
+            <h2>Data Export</h2>
+            <p class="desc">Quét và thống kê chi tiết toàn bộ danh sách video của một kênh TikTok để xuất dữ liệu.</p>
+            <a href="https://thanhnhut201294.github.io/tiktok-scan/" target="_blank" class="btn">Truy cập ngay</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2024 ThanhNhut - TikTok Data Tools</p>
+    </footer>
+
+</body>
+</html>
